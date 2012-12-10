@@ -1,0 +1,25 @@
+Determinação de chave primária
+
+O modelo relacional requer a existência de uma chave primária para garantir a integridade
+da entidade, ou seja, a capacidade para identificar exclusivamente qualquer linha.  DB2 no
+entanto, não impõe este requisito, exceto quando "referential cosntrains" estão definidos.
+Em geral, qualquer registo que é um dono deve ser convertido para uma tabela com uma chave
+primária.  Registos de que não são proprietários, no entanto, não é necessário ter as
+chaves primárias se não houver nenhum candidato adequado.
+
+
+Entry Record
+
+Por simplicidade de referência neste manual, um novo termo será definido aqui:  ENTRY
+RECORD.  Haverá muitas referências a um registro que é um registro CALC ou armazenado
+em um conjunto indexado.  Estes são registros que podem ser acessados diretamente dada
+uma chave única que está presente no registro.  Eles são os pontos normais de entrada de
+base de dados.  Assim, o termo "ENTRY RECORD" neste documento pode significar tanto um
+registro CALC ou um registro armazenado em um conjunto indexado.
+
+Normalmente, a chave de um registro de entrada é uma chave primária. Duas exceções existem:
+
+- O aplicativo usa uma chave para acesso que não é a chave primária devido a necessidades
+da aplicação, por exemplo, (nome do cliente eo número da rua, em vez de número de conta
+para um aplicativo de pesquisa de conta).
+
