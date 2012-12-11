@@ -1,0 +1,38 @@
+OWNERS:
+    dicOwners{setName:OWNER}
+
+lisRecord= [{'NAME':'record1'
+           ,'CALC_KEY': ['CALC_KEY_1'
+                        , 'CALC_KEY_N'
+                        ]
+           ,'OWNER_OF_SET':['SET1'
+                           ,'SET2'
+                           ]
+           ,'MEMBER_OF_SET':['SET3'
+                            ,'SET4'
+                            ]
+            }
+
+           ,{'NAME':'record2'
+           ,'MEMBER_OF_SET':['SET3'
+                            ,'SET4'
+                            ]
+            }
+           ]
+
+
+lisField = [{'FIELD_ORDER': 1
+            ,'FIELD_LEVEL': 2
+            ,'FIELD_NAME': 'FLD1'
+            ,'USAGE': 'DISPLAY'
+            ,'LENGTH': 9
+            ,'PICTURE': 'X'
+            }
+           ,{'FIELD_ORDER': 2
+            ,'FIELD_LEVEL': 2
+            ,'FIELD_NAME': 'FLD2'
+            ,'USAGE': 'DISPLAY'
+            ,'LENGTH': 9
+            ,'PICTURE': 'X'
+            }
+           ]
