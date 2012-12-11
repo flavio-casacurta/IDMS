@@ -89,7 +89,7 @@ def Capitalize(string, N=2):
 
 def remarks(op, texto=None):
     if  not texto:
-        texto = 'RSRC'
+        texto = 'CCHS'
     if  op == 'D':
         return texto + '-D*'
     if  op == 'U':
