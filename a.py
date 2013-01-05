@@ -50,7 +50,7 @@ print at
 import CreateTable as ct
 from time import time
 t0 = time()
-crt = ct.CreateTable(schema=r"C:\web2py\applications\Resource\modules\schemaB.txt", owner="DB2DES", startRec = 1)
+crt = ct.CreateTable(schema=r"C:\web2py\applications\IDMS\modules\schemaB.txt", owner="DB2DES", startRec = 1)
 crt.createTable()
 print 'tempo transcorrido:', time()-t0
 
@@ -62,7 +62,7 @@ isOwner    = lambda line: line.strip().startswith('OWNER IS')
 isMember   = lambda line: line.strip().startswith('MEMBER IS')
 splitIS    = lambda line: line.split('IS')[1].strip()
 
-lines      = open(r'C:\web2py\applications\Resource\modules\schemaC.txt').readlines()
+lines      = open(r'C:\web2py\applications\IDMS\modules\schemaC.txt').readlines()
 
 findSet    = filter(isSet, lines)
 
@@ -168,7 +168,7 @@ for r in lisRecords:
 
 
 import idms2db2 as idms
-i2d = idms.Idms2db2(schema=r"C:\web2py\applications\Resource\modules\schemaC.txt")
+i2d = idms.Idms2db2(schema=r"C:\web2py\applications\IDMS\modules\schemaC.txt")
 id  = i2d.idms2db2()
 lisRecords   = id[3]
 
@@ -265,7 +265,7 @@ print '{0}({1})'.format(dicAttrCob['COMP2'][0], dicAttrCob['COMP2'][1])
 import idms2db2 as idms
 from time import time
 t0 = time()
-i2d = idms.Idms2db2(schema=r"C:\web2py\applications\Resource\modules\schemaB.txt", startRec = 1)
+i2d = idms.Idms2db2(schema=r"C:\web2py\applications\IDMS\modules\schemaB.txt", startRec = 1)
 id  = i2d.idms2db2()
 dicSchema    = id[0]
 dicSetOwner  = id[1]
@@ -278,7 +278,7 @@ print 'tempo transcorrido:', time()-t0
 from time import time
 t0 = time()
 import idms2db2 as idms
-i2d = idms.Idms2db2(schema=r"C:\web2py\applications\Resource\modules\schemaC.txt", startRec = 1)
+i2d = idms.Idms2db2(schema=r"C:\web2py\applications\IDMS\modules\schemaC.txt", startRec = 1)
 id  = i2d.idms2db2()
 dicSchema    = id[0]
 dicSetOwner  = id[1]
@@ -358,7 +358,7 @@ ds.close()
 import CreateTable as ct
 from time import time
 t0 = time()
-crt = ct.CreateTable(schema=r"C:\web2py\applications\Resource\modules\schemaB.txt", owner="DB2DES", startRec = 1)
+crt = ct.CreateTable(schema=r"C:\web2py\applications\IDMS\modules\schemaB.txt", owner="DB2DES", startRec = 1)
 crt.createTable()
 print 'tempo transcorrido:', time()-t0
 
@@ -367,7 +367,7 @@ from time import time
 t0 = time()
 
 import CreateBooks as cb
-crb = cb.CreateBooks(schema=r"C:\web2py\applications\Resource\modules\schemaB.txt", startRec = 1)
+crb = cb.CreateBooks(schema=r"C:\web2py\applications\IDMS\modules\schemaB.txt", startRec = 1)
 crb.createBooks()
 print 'tempo transcorrido:', time()-t0
 
@@ -375,7 +375,7 @@ print 'tempo transcorrido:', time()-t0
 from time import time
 t0 = time()
 import CreateBooks_TEXT as cb
-crb = cb.CreateBooks(schema=r"C:\web2py\applications\Resource\modules\schemaB.txt", startRec = 1)
+crb = cb.CreateBooks(schema=r"C:\web2py\applications\IDMS\modules\schemaB.txt", startRec = 1)
 crb.createBooks()
 print 'tempo transcorrido:', time()-t0
 
@@ -383,13 +383,13 @@ print 'tempo transcorrido:', time()-t0
 from time import time
 t0 = time()
 import CreateTable as ct
-crt = ct.CreateTable(schema=r"C:\web2py\applications\Resource\modules\schemaC.txt", owner="DB2CXF")
+crt = ct.CreateTable(schema=r"C:\web2py\applications\IDMS\modules\schemaC.txt", owner="DB2CXF")
 crt.createTable()
 print 'tempo transcorrido:', time()-t0
 
 
 import CreateBooks as cb
-crb = cb.CreateBooks(schema=r"C:\web2py\applications\Resource\modules\schemaC.txt", startRec = 0)
+crb = cb.CreateBooks(schema=r"C:\web2py\applications\IDMS\modules\schemaC.txt", startRec = 0)
 crb.createBooks()
 
 
@@ -397,7 +397,7 @@ crb.createBooks()
 import idms2db2 as idms
 from time import time
 t0 = time()
-i2d = idms.Idms2db2(schema=r"C:\web2py\applications\Resource\modules\schemaC.txt")
+i2d = idms.Idms2db2(schema=r"C:\web2py\applications\IDMS\modules\schemaC.txt")
 id  = i2d.idms2db2()
 dicSchema    = id[0]
 dicSetOwner  = id[1]

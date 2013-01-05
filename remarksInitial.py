@@ -20,8 +20,8 @@ def remarks(op, texto=None):
 
 txt = [' MODULO GERADO A PARTIR DO SCHEMA @SCHEMA'
       ,' PARA MANUTENCAO DA TABELA @TABLE')
-      ,' POR  RESOURCE ITSOLUTIONS'
-      ,'   visite www.resource.com.br '
+      ,' POR  C&C - HardSoft'
+      ,'   visite www.cechardsof.com '
       ,'   Engenharia de SoftWare:'
       ,'      Flavio A. Casacurta'
       ,'EM %s' % strftime("%a, %d %b %Y AS %H:%M:%S", gmtime())]
