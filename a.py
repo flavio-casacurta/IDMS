@@ -64,11 +64,34 @@ splitIS    = lambda line: line.split('IS')[1].strip()
 
 lines      = open(r'C:\web2py\applications\IDMS\modules\schemaC.txt').readlines()
 
-findSet    = filter(isSet, lines)
+#facil
+findSet   = []
+findOwner = []
+dicFacil  = {}
 
-findOwner  = filter(isOwner, lines)
+for line in lines:
+    if  line.strip().startswith('SET NAME IS'):
+        findSet.append(line.split('IS')[1].strip())
+    elif line.strip().startswith('OWNER IS'):
+        findOwner.append(line.split('IS')[1].strip())
 
-dicSetOwner = {k:v for k, v in zip(map(splitIS, findSet),map(splitIS, findOwner))}
+for n, k in enumerate(findSet):
+    dicFacil[k]=findOwner[n]
+
+#simples
+
+isSet      = lambda line: line.strip().startswith('SET NAME IS')
+isOwner    = lambda line: line.strip().startswith('OWNER IS')
+splitIS    = lambda line: line.split('IS')[1].strip()
+
+dicSimples = {k:v for k, v in zip(map(splitIS, filter(isSet, lines)),map(splitIS, filter(isOwner, lines)))}
+
+dicFacil  == dicSimples
+
+dicFacil['NAO-HOMOL']
+dicSimples['NAO-HOMOL']
+
+
 
 findMember  = filter(isMember, lines)
 
